@@ -81,8 +81,8 @@ List of Azure `Node` properties:
 | azure.size             | ID of the Azure virtual machine size. Some typical are: `BASIC_A[0-4]`, `A[5-11]`, `EXTRASMALL`, `SMALL`, `MEDIUM`, `LARGE`, `EXTRALARGE`. | Azure-specific default value. |
 | azure.inboundPorts     | Comma-delimited numbers of TCP ports that should be open.         | 22                                 |
 | azure.storageAccountName | Name of the storate account used for allocating storage for a virtual machine. | [None. Mandatory.]  |
-| azure.ssh.user         | Username of the user that will be created in the virtual machine. Will be later used for SSH. | [None. Mandatory.] |
-| azure.ssh.password     | Password of the user that will be created in the virtual machine. Will be later used for SSH. Note that Azure requires passwords to have certain quality; too simple passwords will cause an error. | [None. Mandatory.] |
+| azure.login.name         | Username of the user that will be created in the virtual machine. Will be later used for SSH. | [None. Mandatory.] |
+| azure.login.password     | Password of the user that will be created in the virtual machine. Will be later used for SSH. Note that Azure requires passwords to have certain quality; too simple passwords will cause an error. | [None. Mandatory.] |
 | azure.virtualNetwork   | Name of an existing virtual network in Azure. This node will join this virtual network and will be available in a subnet of this virtual network specified by `azure.subnet`. Both of `azure.virtualNetwork` and `azure.subnet` must be used, or none of them. Specifying only one is an error. | [None. Optional.] |
 | azure.subnet           | Name of an existing subnet in an existing virtual network in Azure. See `azure.virtualNetwork` for more. | [None. Optional.] |
 | azure.waitForPorts     | Comma-delimited list of ports that must be open after the virtual machine starts. | [None. Optional.]  |
